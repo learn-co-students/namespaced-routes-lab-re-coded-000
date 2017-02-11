@@ -1,6 +1,6 @@
 <h1>Control Panel</h1>
 
-<%= form_for @preference, url: admin_preferences_path do |f| %>
+<%= form_for @preference, url: admin_preference_path(@preference) do |f| %>
 <%= f.label :allow_create_artists %><br>
 True: <%= f.radio_button :allow_create_artists, true %>
 False: <%= f.radio_button :allow_create_artists, false %>
