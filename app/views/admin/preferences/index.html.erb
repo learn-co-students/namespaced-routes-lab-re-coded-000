@@ -1,0 +1,25 @@
+<h1>Access</h1>
+<%= form_for @preference, url: admin_preferences_path(@preference) do |f| %> 
+<!-- /admin/preferences  => This route Should be work -->
+  <div>
+    <%= f.label "Allow create artists" %><br>
+    True: <%= f.radio_button :allow_create_artists, true %><br>
+    False: <%= f.radio_button :allow_create_artists, false %>
+  </div>
+  <div>
+    <%= f.label "Allow create songs"%><br>
+    True: <%= f.radio_button :allow_create_songs, true %><br>
+    False: <%= f.radio_button :allow_create_songs, false %>
+  </div>
+  <div>
+    <%= f.label "Song sort order" %>:<br>
+    DESC: <%= f.radio_button :song_sort_order, "DESC" %><br>
+    ASC: <%= f.radio_button :song_sort_order, "ASC" %>
+  </div>
+  <div>
+    <%= f.label "Artist sort order" %>:<br>
+    DESC: <%= f.radio_button :artist_sort_order, "DESC" %><br>
+    ASC: <%= f.radio_button :artist_sort_order, "ASC" %>
+  </div>
+  <%= f.submit %>
+<% end %>
